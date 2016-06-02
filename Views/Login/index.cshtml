@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from 0.s3.envato.com/files/51564135/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 May 2016 06:38:02 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <!-- templatemo 411 dragonfruit -->
+    <meta name="author" content="templatemo" />
+    <!-- Favicon-->
+    <title>Tab Login & Sign Up Forms</title>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/Logincss/blue.css" />
+
+    <script src="~/Scripts/js/temp.js"></script>
+    <link rel="shortcut icon" href="./favicon.png" />
+    <!-- Font Awesome -->
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Template  -->
+    <link href="~/Content/css/templatemo_style.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color:#333333">
+    @{
+        ViewBag.Title = "Login or Sign Up";
+        Layout = "~/Views/Shared/_mainLayout.cshtml";
+    }
+    <div id="wrapper">
+
+        <div id="container" style="margin-top:80px">
+            <section class=" tabs" =tabs">
+                <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" />
+                <span for="tab-1" class="tab-label-1">Signup</span>
+
+                <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" checked="checked" />
+                <span for="tab-2" class="tab-label-2">Login</span>
+
+                <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+                <span for="tab-3" class="tab-label-3">Forget Password</span>
+
+                <div class="clear-shadow"></div>
+
+                <div id="content">
+                    <div class="content-1">
+                        <form action="/Login/AddUser" autocomplete="on" method="post">
+                            <p>
+                                <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                                <input class="field" name="usernamesignup" required="required" type="text" placeholder="myusername" />
+                            </p>
+                            <p>
+                                <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
+                                <input class="field" name="emailsignup" required="required" type="email" placeholder="myusername@gmail.com" />
+                            </p>
+                            <p>
+                                <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                <input class="field" name="passwordsignup" required="required" type="password" placeholder="mypassword" />
+                            </p>
+                            <p>
+                                <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                <input class="field" name="passwordsignup_confirm" required="required" type="password" placeholder="mypassword" />
+                            </p>
+                            <p class="signin button">
+                                <input type="checkbox" required="required" /> I agree with terms and conditions
+                                <input type="submit" value="Sign up" />
+                            </p>
+                        </form>
+                    </div>
+                    <div class="content-2">
+                      
+                        
+                        <form action="/Login/Validate" autocomplete="on" method="post">
+                            @{   if (Session["invalid"] != null)
+                               {
+                                    
+                                <label style="color:red">Invalid username or password. Please try again.</label>
+                                   Session["invalid"] = null;
+                               }
+                            }
+                            <p>
+                                <label for="username" class="uname" data-icon="u"> Your email or username </label>
+                                <input class="field" name="email" required="required" type="text" placeholder="myusername@gmail.com" />
+                            </p>
+                            <p>
+                                <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                <input class="field" name="password" required="required" type="password" placeholder="mypassword" />
+                            </p>
+                            <p class="keeplogin">
+                                <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> Keep me logged in
+                                <input type="submit" value="Login" />
+                            </p>
+                        </form>
+                    </div>
+                    <div class="content-3">
+                        <form action="#" autocomplete="on">
+                            <p>
+                                <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
+                                <input class="field" name="emailsignup" required="required" type="email" placeholder="myusername@gmail.com" />
+                            </p>
+                            <p class="signin button">
+                                <input type="submit" value="Get New Password" />
+                            </p>
+                        </form>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+<!-- Mirrored from 0.s3.envato.com/files/51564135/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 May 2016 06:38:03 GMT -->
+</html>

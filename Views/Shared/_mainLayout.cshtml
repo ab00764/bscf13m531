@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;   
+}
+
+
+<div class="container_wapper">
+    <div id="templatemo_banner_menu">
+        <div class="container-fluid">
+            <div class="col-xs-4 templatemo_logo">
+                <a href="#">
+                    <img src="/images/templatemo_logo.jpg" id="logo_img" alt="dragonfruit website template" title="Dragonfruit Template" />
+                    <h1 id="logo_text">Visit<span>Marker</span></h1>
+                </a>
+            </div>
+            <div class="col-sm-8 hidden-xs">
+                <ul class="nav nav-justified">
+                    <li><a href="@Url.Action("index", "Home")" class="external-link">Home</a></li>
+                    <li><a href="@Url.Action("index","Home")" class="external-link">Maps</a></li>
+                    <li><a href="@Url.Action("Article","Home")" class="external-link">Article&images</a></li>
+                    <li><a href="http://www.visitmarker.com/Developer/" class="external-link">About</a></li>
+                    <li><a href="@Url.Action("ContactUs","Home" )" class="external-link">Contact</a></li>
+                    <li><a href="@Url.Action("index","Login")" class="external-link">Login</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-8 visible-xs">
+                <a href="#" id="mobile_menu"><span class="glyphicon glyphicon-th-list"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@RenderBody();

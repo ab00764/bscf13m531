@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+
+    Dragonfruit Template
+
+    http://www.templatemo.com/tm-411-dragonfruit
+
+    -->
+    <title>Articles</title>
+    <meta name="description" content="" />
+    <!-- templatemo 411 dragonfruit -->
+    <meta name="author" content="templatemo">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="./favicon.png" />
+    <!-- Font Awesome -->
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template  -->
+    <link href="~/Content/css/templatemo_style.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/bs.css" rel="stylesheet" type="text/css" />
+
+    <!-- Css Files Start -->
+    <link href="/Content/css/BXSlider/bs.css" rel="stylesheet" />
+    <link href="/Content/css/BXSlider/font-awesome-ie7.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/BXSlider/font-awesome.css" />
+    <link href="/Content/css/BXSlider/main-slider.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/css/BXSlider/style.css" rel="stylesheet" type="text/css" />
+
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="~/Content/noJS.css" />
+    </noscript>
+    <!-- Css Files End -->
+
+
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="/Content/css/noJS.css" />
+    </noscript>
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+       
+    @{
+        if (Session["username"] == null)
+        {
+            ViewBag.Title = "Articles & Images";
+            Layout = "~/Views/Shared/_mainLayout.cshtml";
+
+        }
+        else
+        {
+            ViewBag.Title = "Articles & Images";
+            Layout = "~/Views/Shared/_mainLayoutWithLogout.cshtml";
+
+        }
+    }
+    <form action="/Home/ArticleDetails" method="post">
+        <header id="main-header">
+            <!-- Start Main Nav Bar -->
+            <nav id="nav">
+                <div class="navbar navbar-inverse" style="margin-bottom:-60px">
+                    <div class="navbar-inner">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <!--/.nav-collapse -->
+
+                        <div class="search-bar" style="margin-top:70px; margin-bottom:20px;width:350px">
+                            <input style="width:250px" name="" type="text" value="Search here..." autocomplete="on" />
+                            <input name="" type="submit" value="Serach" style="border:0;font-size:14px;color:#fff;padding:10px 20px;float:left;background:#0099CC;cursor:pointer;-webkit-transition:1s; -webkit-appearance:button;width:auto;font-family:Arial;line-height:20px;font:inherit;box-sizing:border-box;align-items:flex-start;text-align:center;-webkit-user-select:none; white-space:pre; -webkit-rtl-ordering:logical;text-rendering:auto;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0px;text-shadow:none;display:inline-block;-webkit-writing-mode:horizontal-tb;box-sizing:border-box" />
+
+                        </div>
+                    </div>
+                    <!-- /.navbar-inner -->
+                </div>
+                <!-- /.navbar -->
+            </nav>
+            <!-- End Main Nav Bar -->
+        </header>
+    </form>
+           
+
+    <!-- Start BX Slider holder -->
+    <section class="row-fluid features-books" style="margin-top:100px; margin-left:20px;margin-right:100px">
+        <section class="span12 m-bottom">
+            <div class="heading-bar">
+                <h2>Famous Articles</h2>
+                <span class="h-line"></span>
+            </div>
+            <div class="slider1">
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image01.png" alt="" class="pro-img" /></a> <span class="title" ><a href="#" style="font-size:16px">Lake-Saif-ul-Malook</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image02.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Concordia</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image03.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Rohtas-Fort</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image04.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Kalash-Valley</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image05.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Shandur-Top</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image06.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Gorakh</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image07.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Badshahi-mosque</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image08.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Deosai-Plateau</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image09.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Hingol-National-park</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image10.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Wagah-border</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image11.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#" style="font-size:18px">Taxila</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image12.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#">Mazar-e-Quaid</a></span> 
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="/images/SliderIMG/image13.jpg" alt="" class="pro-img" /></a> <span class="title"><a href="#">Pir-Sohawa</a></span> 
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--BX Slider End-->
+
+   
+        <div id="templatemo_contact" class="container_wapper">
+            <div class="container-fluid">
+
+                <div class="col-xs-12">
+                    <div id="templatemo_contact_map"></div>
+                </div>
+                
+                <form action="/Home/SaveArticle" method="post" class="col-md-8" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Your Article</h1>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Name</p>
+                            <input type="text" name="name" id="name" placeholder="Your Name" />
+                        </div>
+                        <div class="col-md-6">
+                            <p>Location</p>
+                            <select name="location" style="height:50px; font-size:20px">
+                                <option>Select Location...</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Karachi">Karachi</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Rawalpindi">Rawalpindi</option>
+                                <option value="Faislabad">Faislabad</option>
+                                <option value="Quetta">Quetta</option>
+                                <option value="Peshawar">Peshawar</option>
+                                <option value="Gujranwala">Gujranwala</option>
+                                <option value="Sialkot">Sialkot</option>
+                                <option value="Okara">Okara</option>
+                                <option value="Hafizabad">Hafizabad</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Sahiwal">Sahiwal</option>
+
+                            </select>
+                            <!--<input type="text" name="email" id="email" placeholder="Your Email" />-->
+                        </div>
+
+                        <aside style="float:right; margin-right:-300px">
+                            <div id="image1" style="width:190px; height:230px;" onchange="image()">
+                                <label for="file-input" style="background-color:#FFFFFF; color:#FFFFFF;">
+                                    <img id="im1" src="/images/upload2.jpg" width="170" />
+                                    <input name="img" type="file" style="visibility:collapse" id="file-input" />
+                                </label>
+                            </div>
+                            
+                        </aside>
+                        
+                        <div class="col-md-12">
+                            <p>Subject</p>
+                            <input type="text" name="subject" id="subject" placeholder="Subject" />
+                        </div>
+                        <div class="col-md-12">
+                            <p>Comment</p>
+                            <textarea name="message" id="message" placeholder="Write your comment here..."></textarea>
+                        </div>
+                        
+                        <div class="col-xs-6 col-sm-3 col-md-offset-6">
+                            <button type="submit">Send</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <button type="reset">Reset</button>
+                        </div>
+                    </div>
+                </form>
+                
+               <!-- <aside style="float:right; margin-right:30px">
+                    <h1 style="margin-right:50px">Upload Images</h1><br />
+                    <form>
+                        <div id="image1" style="width:190px; height:230px;" onkeypress="Home/Upload">
+                            <label for="file-input" style="background-color:#FFFFFF; color:#FFFFFF;">
+                                <img src="/images/upload2.jpg" width="170" />
+                                <input id="file-input" type="file" style="visibility:collapse " onclick="uploader()" />
+                            </label>
+                        </div>
+                        
+                        <div id="image3" style="width:190px; height:230px;">
+                            <label for="file-input" style="background-color:#FFFFFF; color:#FFFFFF;">
+                                <img src="/images/upload2.jpg" width="170" />
+                                <input id="file-input" type="file" style="visibility:collapse " />
+                            </label>
+                        </div>
+                    </form>
+                </aside>-->
+            </div>
+        </div>
+        
+    
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="~/Scripts/js/jquery.min.js"></script>
+        <script src="~/Scripts/js/jquery-ui.min.js"></script>
+        <script src="~/Scripts/js/bootstrap.min.js"></script>
+        <script src="~/Scripts/js/jquery.singlePageNav.min.js"></script>
+        <script src="~/Scripts/js/unslider.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+        <script src="~/Scripts/js/templatemo_script.js"></script>
+        <script src="~/Scripts/js/temp.js"></script>
+
+
+    <!-- JS Files Start -->
+    <script type="text/javascript" src="/Scripts/SliderJS/lib.js"></script><!-- lib Js -->
+    <script type="text/javascript" src="/Scripts/SliderJS/modernizr.js"></script><!-- Modernizr -->
+    <script type="text/javascript" src="/Scripts/SliderJS/easing.js"></script><!-- Easing js -->
+    <script type="text/javascript" src="/Scripts/SliderJS/bs.js"></script><!-- Bootstrap -->
+    <script type="text/javascript" src="/Scripts/SliderJS/bxslider.js"></script><!-- BX Slider -->
+    <script type="text/javascript" src="/Scripts/SliderJS/input-clear.js"></script><!-- Input Clear -->
+    <script src="/Scripts/SliderJS/range-slider.js"></script><!-- Range Slider -->
+    <script src="/Scripts/SliderJS/jquery.zoom.js"></script><!-- Zoom Effect -->
+    <script type="text/javascript" src="/Scripts/SliderJS/bookblock.js"></script><!-- Flip Slider -->
+    <script type="text/javascript" src="/Scripts/SliderJS/custom.js"></script><!-- Custom js -->
+    <script type="text/javascript" src="/Scripts/SliderJS/social.js"></script><!-- Social Icons -->
+    <!-- JS Files End -->
+        <noscript>
+            <style>
+                #socialicons > a span {
+                    top: 0px;
+                    left: -100%;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                #socialicons > ahover div {
+                    left: 0px;
+                }
+            </style>
+        </noscript>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            $(document).ready(function () {
+                $('.social_active').hoverdir({});
+            })
+            /* ]]> */
+        </script>
+    <script type="text/javascript">
+
+        function image(event)
+        {
+            var selectedFile = event.target.file[0];
+            var reader = new FileReader();
+            var imgtag = document.getElementById("image1");
+            imgtag.title = selectedFile.name;
+            reader.onload = function event() {
+                imgtag.src = event.target.result;
+            }
+            reader.readAsDataURL(selectedFile);
+        }
+        
+
+    </script>
+
+
+</body>
+</html>
